@@ -20,6 +20,6 @@ return (0);
 }
 else
 {
+return (n);
 }
-}return (n);
-
+}
