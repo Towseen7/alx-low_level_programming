@@ -1,20 +1,36 @@
+#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
+
+int _putchar(char c);
 
 /**
-* main - Entry point.
-* Return: Always 0.
+* print_number - like a hello world
+* @n: params an integer
+* No return
 */
 
-int main(void)
+void print_number(int n)
 
 {
-long n, i;
-n = 612852475143;
-for (i = 2; i < n; i++)
+unsigned int n1 = 0;
+if  (n < 0)
 {
-while (n % i == 0)
-n = n / i;
+n1 = -n;
+_putchar('-');
 }
-printf("%lu\n", n);
-return (0);
+
+else
+{
+n1 = n;
 }
+
+if (n1 / 10)
+{
+print_number(n1 / 10);
+}
+
+_putchar((n1 % 10) + '0');
+}
+
+
