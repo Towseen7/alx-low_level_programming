@@ -1,20 +1,9 @@
-#include "main.h"
-
-/**
- * _strchr - Locates a character in a string.
- * @s: The string to be searched.
- * @c: The character to be located.
- * Return: If c is found - a pointer to the first occurence.
- * If c is not found - NULL.
- */
-
-char *_strchr(char *s, char c)
-{
-int index;
-for (index = 0; s[index] >= '\0'; index++)
-{
-if (s[index] == c)
-return (s + index);
-}
-return ('\0');
-}
+char *_memset(char *s, char b, unsigned int n);
+char *_memcpy(char *dest, char *src, unsigned int n);
+char *_strchr(char *s, char c);
+unsigned int _strspn(char *s, char *accept);
+char *_strpbrk(char *s, char *accept);
+char *_strstr(char *haystack, char *needle);
+void print_chessboard(char (*a)[8]);
+oid print_diagsums(int *a, int size);
+void set_string(char **s, char *to);
