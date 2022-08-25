@@ -60,7 +60,7 @@ void print_magic(unsigned char *e_ident)
 	for (index = 0; index < EI_NIDENT; index++)
 	{
 		printf("%02x", e_ident[index]);
-		
+
 		if (index == EI_NIDENT - 1)
 			printf("\n");
 		else
@@ -233,7 +233,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
 	printf("  Entry point address:               ");
-	
+
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
 		e_entry = ((e_entry << 8) & 0xFF00FF00) |
